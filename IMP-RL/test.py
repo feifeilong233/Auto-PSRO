@@ -40,7 +40,7 @@ from psro_variants.psro_ns import run_psro
 
 parser = argparse.ArgumentParser(description='gos')
 parser.add_argument('--environment', type=str, default='imp')
-parser.add_argument('--job_number', type=int, default=111)
+parser.add_argument('--job_number', type=int, default=222)
 parser.add_argument('--num_test_games', type=int, default=20)
 parser.add_argument('--psro_iters', type=int, default=9)
 
@@ -95,10 +95,10 @@ def run_experiment(mod_list, method_list, unique_params, num_unique, num_test_ga
 model_list = []
 # For testing NAC, load the model here
 
-# m = meta_solver_gru().to(device)
-# m.load_state_dict(torch.load('./pretrain_model/model.pt'))
-# model_list = [m]
-# method_list = ['auto']
+m = meta_solver_gru().to(device)
+m.load_state_dict(torch.load('./model.pt'))
+model_list = [m]
+method_list = ['auto']
 
 # For testing Nash-PSRO/Uniform/Self-play,
 # model_list = [None]
