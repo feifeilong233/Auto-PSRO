@@ -185,7 +185,7 @@ if __name__ == "__main__":
         window_size = 9,
         inner_lr = 2,
         outer_lr = 0.007,
-        nb_total_iters = 400,
+        nb_total_iters = 200,
         nb_psro_iters = 15,
         nb_inner_train_iters = 5,
         nb_exp_iters = 20,
